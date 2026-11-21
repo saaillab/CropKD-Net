@@ -1,115 +1,47 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-jm7tem27> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CropKD-Net (Edge Knowledge Distillation) | CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics - SAAIL Lab</title><meta name="description" content="Paper 2 of the CropGuard Research Series: distills multi-teacher CNN and Transformer plant pathology representations via Quantization-Aware Training (QAT) into an ultra-compact student network for sub-150 KB INT8 smartphone and microcontroller deployment."><meta name="keywords" content="knowledge distillation, quantization-aware training, INT8 edge AI, plant disease detection, model compression, CropGuard"><meta name="author" content="Innocent Nyalala"><link rel="canonical" href="https://saaillab.github.io/CropKD-Net/"><!-- Highwire Press / Google Scholar Academic Meta Tags --><meta name="citation_title" content="CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics"><meta name="citation_author" content="Innocent Nyalala"><meta name="citation_publication_date" content="2026/11/20"><meta name="citation_journal_title" content="Computers and Electronics in Agriculture (Pipeline · CropGuard Series Paper 2)"><meta name="citation_public_url" content="https://saaillab.github.io/CropKD-Net/"><!-- Open Graph & Social Previews --><meta property="og:type" content="article"><meta property="og:site_name" content="SAAIL Lab · IIT Madras Zanzibar"><meta property="og:title" content="CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics"><meta property="og:description" content="Paper 2 of the CropGuard Research Series: distills multi-teacher CNN and Transformer plant pathology representations via Quantization-Aware Training (QAT) into an ultra-compact student network for sub-150 KB INT8 smartphone and microcontroller deployment."><meta property="og:url" content="https://saaillab.github.io/CropKD-Net/"><meta property="og:image" content="https://saaillab.github.io/images/og-saaillab.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:title" content="CropKD-Net (Edge Knowledge Distillation)"><meta property="twitter:description" content="Paper 2 of the CropGuard Research Series: distills multi-teacher CNN and Transformer plant pathology representations via Quantization-Aware Training (QAT) into an ultra-compact student network for sub-150 KB INT8 smartphone and microcontroller deployment."><meta property="twitter:image" content="https://saaillab.github.io/images/og-saaillab.png"><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-4MEPY7MLVN"></script><script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4MEPY7MLVN');
-  </script><!-- Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics","name":"CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics","description":"Paper 2 of the CropGuard Research Series: distills multi-teacher CNN and Transformer plant pathology representations via Quantization-Aware Training (QAT) into an ultra-compact student network for sub-150 KB INT8 smartphone and microcontroller deployment.","datePublished":"2026-11-20","url":"https://saaillab.github.io/papers/cropkd-net/","image":"https://saaillab.github.io/images/og-saaillab.png","keywords":"knowledge distillation, quantization-aware training, INT8 edge AI, plant disease detection, model compression, CropGuard","inLanguage":"en","isAccessibleForFree":true,"author":[{"@type":"Person","name":"Innocent Nyalala","url":"https://inyalala.github.io"}],"publisher":{"@type":"Organization","name":"Computers and Electronics in Agriculture (Pipeline · CropGuard Series Paper 2)"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SAAIL Lab","item":"https://saaillab.github.io/"},{"@type":"ListItem","position":2,"name":"Publications","item":"https://saaillab.github.io/publications/"},{"@type":"ListItem","position":3,"name":"CropKD-Net (Edge Knowledge Distillation)","item":"https://saaillab.github.io/papers/cropkd-net/"}]}</script><link rel="stylesheet" href="https://saaillab.github.io/_astro/_slug_.r0RwkWO2.css"></head> <body data-astro-cid-jm7tem27> <!-- Back & Navigation Floating Controls (Inspired by horwitz.ai / Academic Project Page Template) --> <a href="https://saaillab.github.io/publications" class="floating-back-btn" aria-label="Back to SAAIL Lab Publications" data-astro-cid-jm7tem27> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M19 12H5M12 19l-7-7 7-7" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>SAAIL Lab</span> </a> <div class="more-works-container" data-astro-cid-jm7tem27> <button id="moreWorksBtn" class="more-works-btn" type="button" aria-expanded="false" aria-controls="moreWorksDropdown" data-astro-cid-jm7tem27> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M9 3h6v2l-1 1v4.5l4.8 7.6A2 2 0 0 1 17.1 21H6.9a2 2 0 0 1-1.7-2.9L10 10.5V6L9 5V3z" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>More Works</span> <svg id="moreWorksChevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M6 9l6 6 6-6" data-astro-cid-jm7tem27></path> </svg> </button> <div id="moreWorksDropdown" class="more-works-dropdown" role="menu" hidden data-astro-cid-jm7tem27> <div class="dropdown-header" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>More Works from SAAIL Lab</span> <button id="closeMoreWorks" type="button" class="close-dropdown" aria-label="Close menu" data-astro-cid-jm7tem27>&times;</button> </div> <div class="dropdown-list" data-astro-cid-jm7tem27> <a href="https://saaillab.github.io/papers/cropguardnet/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>CropGuardNet (Cross-Crop Leaf Disease AI)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>Artificial Intelligence in Agriculture · 2026</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a><a href="https://saaillab.github.io/papers/cloves-4603/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>CLOVES-4603 (CVPR 2026 V4A)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>CV4A @ CVPR 2026</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a><a href="https://saaillab.github.io/papers/dgs-bench/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>DGS-Bench (DLI 2026 Best Poster)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>Deep Learning Indaba 2026</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a><a href="https://saaillab.github.io/papers/dcgan-cassava-dsa2026/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>When Synthetic Data Hurts (DSA 2026 Oral)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>DSA 2026 · Oral</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a><a href="https://saaillab.github.io/papers/auditing-crop-datasets-dsa2026/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>Auditing Crop Benchmark Datasets (DSA 2026)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>DSA 2026 · Oral &amp; Poster</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a><a href="https://saaillab.github.io/papers/few-shot-cassava-dsa2026/" class="dropdown-item" role="menuitem" data-astro-cid-jm7tem27> <div class="dropdown-item-title" data-astro-cid-jm7tem27>Few-Shot Cassava Transfer Learning (DSA 2026)</div> <div class="dropdown-item-meta" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>DSA 2026 · Oral &amp; Poster</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" data-astro-cid-jm7tem27></path> </svg> </div> </a> </div> <a href="https://saaillab.github.io/publications" class="dropdown-footer-link" data-astro-cid-jm7tem27>Browse all 45+ SAAIL Lab papers &rarr;</a> </div> </div> <!-- CropGuard Series Banner (for CropGuard Series papers) --> <nav class="series-banner" aria-label="CropGuard Research Series" data-astro-cid-jm7tem27> <div class="series-banner-inner" data-astro-cid-jm7tem27> <a href="https://saaillab.github.io/cropguard/" class="series-hub-link" data-astro-cid-jm7tem27> <span class="series-pill-label" data-astro-cid-jm7tem27>CROPGUARD ECOSYSTEM</span> <span class="series-hub-name" data-astro-cid-jm7tem27>Papers 1-6 Umbrella Hub &rarr;</span> </a> <div class="series-steps" data-astro-cid-jm7tem27> <a href="https://saaillab.github.io/papers/cropguardnet/" class="series-step  " title="CropGuardNet: A Unified Lightweight CNN-Transformer Framework with Multi-Scale Attention and Explainable AI for Cross-Crop Leaf Disease Detection" data-astro-cid-jm7tem27>
-P1: CropGuardNet </a><a href="https://saaillab.github.io/papers/cropkd-net/" class="series-step is-current " title="CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics" data-astro-cid-jm7tem27>
-P2: CropKD-Net </a><a href="https://saaillab.github.io/cropguard/" class="series-step  is-upcoming" title="CropMambaNet: Linear-Complexity Visual State-Space Models for High-Resolution Multi-Scale Foliar Pathology" data-astro-cid-jm7tem27>
-P3: CropMambaNet </a><a href="https://saaillab.github.io/cropguard/" class="series-step  is-upcoming" title="CropDomainNet: Unsupervised Test-Time Domain Adaptation from Controlled Laboratory Archives to Unconstrained Smallholder Fields" data-astro-cid-jm7tem27>
-P4: CropDomainNet </a><a href="https://saaillab.github.io/cropguard/" class="series-step  is-upcoming" title="CropContinual: Replay-Efficient Class-Incremental Learning for Emerging Crop Pathogens Without Catastrophic Forgetting" data-astro-cid-jm7tem27>
-P5: CropContinual </a><a href="https://saaillab.github.io/cropguard/" class="series-step  is-upcoming" title="CropGuard-Severity: Weakly Supervised Disease Severity Quantification and Actionable Intervention Thresholds" data-astro-cid-jm7tem27>
-P6: CropGuard-Severity </a> </div> </div> </nav> <main data-astro-cid-jm7tem27> <!-- Hero Section --> <section class="hero-section" data-astro-cid-jm7tem27> <div class="container" data-astro-cid-jm7tem27> <div class="hero-badges" data-astro-cid-jm7tem27> <span class="venue-badge" data-astro-cid-jm7tem27>CropGuard Series · Paper 2 (Active)</span>    <span class="status-pill" data-astro-cid-jm7tem27>Active Experiments · Paper 2 of CropGuard Series</span> </div> <h1 class="publication-title" data-astro-cid-jm7tem27>CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics</h1> <div class="publication-authors" data-astro-cid-jm7tem27> <span class="author-block" data-astro-cid-jm7tem27> <a href="https://inyalala.github.io" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Innocent Nyalala</a> <sup data-astro-cid-jm7tem27>1,2</sup>   </span> </div> <div class="publication-affiliations" data-astro-cid-jm7tem27> <span class="affiliation-item" data-astro-cid-jm7tem27> <sup data-astro-cid-jm7tem27>1</sup>School of Engineering and Science, Indian Institute of Technology Madras Zanzibar, Tanzania  ·   </span><span class="affiliation-item" data-astro-cid-jm7tem27> <sup data-astro-cid-jm7tem27>2</sup>Wadhwani School of Data Science and AI (WSDSAI), Indian Institute of Technology Madras, Chennai, India </span> </div> <div class="publication-venue-full" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>Computers and Electronics in Agriculture (Pipeline · CropGuard Series Paper 2) (Nov 2026)</span>  </div> <!-- Action Buttons (Classic Academic Template Dark Pill Buttons) --> <div class="action-buttons" data-astro-cid-jm7tem27>   <a href="https://github.com/saaillab/CropKD-Net" target="_blank" rel="noopener" class="action-btn" data-astro-cid-jm7tem27> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>Code</span> </a>   <a href="https://saaillab.github.io/cropguard/" class="action-btn action-btn-accent" data-astro-cid-jm7tem27> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M12 2L2 7l10 5 10-5-10-5z" data-astro-cid-jm7tem27></path> <path d="M2 17l10 5 10-5" data-astro-cid-jm7tem27></path> <path d="M2 12l10 5 10-5" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>CropGuard Series (1-6)</span> </a> <a href="#BibTeX" class="action-btn" data-astro-cid-jm7tem27> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <path d="M6 17h3l2-4V7H5v6h3M15 17h3l2-4V7h-6v6h3" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>BibTeX</span> </a> </div> </div> </section> <!-- Teaser Visual + TL;DR Caption --> <section class="teaser-section" data-astro-cid-jm7tem27> <div class="container container-narrow" data-astro-cid-jm7tem27>  <div class="tldr-block tldr-standalone" data-astro-cid-jm7tem27> <p data-astro-cid-jm7tem27> <strong data-astro-cid-jm7tem27>TL;DR:</strong> Paper 2 of the CropGuard Research Series: distills multi-teacher CNN and Transformer plant pathology representations via Quantization-Aware Training (QAT) into an ultra-compact student network for sub-150 KB INT8 smartphone and microcontroller deployment. </p> </div> </div> </section> <!-- Abstract Section --> <section class="band-section band-light" id="Abstract" data-astro-cid-jm7tem27> <div class="container container-reading" data-astro-cid-jm7tem27> <h2 class="section-heading" data-astro-cid-jm7tem27>Abstract</h2> <div class="abstract-text" data-astro-cid-jm7tem27> <p data-astro-cid-jm7tem27>Paper 1 (CropGuardNet) revealed a key bottleneck for ultra-low-bit edge deployment in agricultural computer vision: while post-training static INT8 quantization collapses parity accuracy on hybrid SiLU-Transformer architectures due to asymmetric activation clipping, unfactorized tiny CNNs incur over 1.15 GFLOPs and slow sequential CPU execution. CropKD-Net addresses this gap through heterogeneous multi-teacher knowledge distillation paired with Quantization-Aware Training (QAT) on the leak-free 35,420-image, 8-crop, 38-class CropGuard benchmark. By aligning spatial lesion attention, feature-pyramid geometry, and crop-conditioned logit calibration during student optimization, CropKD-Net bridges high-accuracy multi-crop teachers with sub-150 KB INT8 ONNX execution for offline smallholder diagnostic devices.</p> </div> <div class="keywords-row" data-astro-cid-jm7tem27> <span class="keywords-label" data-astro-cid-jm7tem27>Keywords:</span> <span class="keyword-chip" data-astro-cid-jm7tem27>knowledge distillation</span><span class="keyword-chip" data-astro-cid-jm7tem27>quantization-aware training</span><span class="keyword-chip" data-astro-cid-jm7tem27>INT8 edge AI</span><span class="keyword-chip" data-astro-cid-jm7tem27>plant disease detection</span><span class="keyword-chip" data-astro-cid-jm7tem27>model compression</span><span class="keyword-chip" data-astro-cid-jm7tem27>CropGuard</span> </div> </div> </section> <!-- Highlights & Contributions --> <section class="band-section" data-astro-cid-jm7tem27> <div class="container container-reading" data-astro-cid-jm7tem27> <h2 class="section-heading" data-astro-cid-jm7tem27>Key Findings &amp; Contributions</h2>  <ol class="contributions-list" data-astro-cid-jm7tem27> <li data-astro-cid-jm7tem27>Directly resolves the SiLU, LayerNorm, and attention clipping bottleneck under post-training static INT8 quantization identified in CropGuardNet.</li><li data-astro-cid-jm7tem27>Employs multi-teacher logit and intermediate feature distillation over the identical UUID- and 64-bit pHash-deduplicated 35,420-image multi-crop partition.</li><li data-astro-cid-jm7tem27>Optimizes compact depthwise student topologies with Quantization-Aware Training (QAT) for sub-150 KB INT8 ONNX deployment.</li> </ol> </div> </section> <!-- Interactive Results & Architecture Figure Carousel -->  <!-- Quantitative Benchmark Tables -->  <!-- BibTeX Citation Section (Matches horwitz.ai/probex Copy Box) --> <section class="band-section band-light" id="BibTeX" data-astro-cid-jm7tem27> <div class="container container-reading" data-astro-cid-jm7tem27> <div class="bibtex-header" data-astro-cid-jm7tem27> <h2 data-astro-cid-jm7tem27>BibTeX</h2> <button type="button" id="copyBibBtn" class="copy-btn" data-copy-target="bibtexCode" data-astro-cid-jm7tem27> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-astro-cid-jm7tem27> <rect x="9" y="9" width="13" height="13" rx="2" ry="2" data-astro-cid-jm7tem27></rect> <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" data-astro-cid-jm7tem27></path> </svg> <span data-astro-cid-jm7tem27>Copy</span> </button> </div> <pre class="bibtex-pre" data-astro-cid-jm7tem27><code id="bibtexCode" data-astro-cid-jm7tem27>@misc{nyalala2026cropkdnet,
-  title={CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics},
-  author={Nyalala, Innocent},
-  year={2026},
-  howpublished={SAAIL Lab CropGuard Research Series, Paper 2},
-  url={https://saaillab.github.io/papers/cropkd-net/}
-}</code></pre> <div class="apa-box" data-astro-cid-jm7tem27> <div class="apa-header" data-astro-cid-jm7tem27> <span class="apa-label" data-astro-cid-jm7tem27>APA Citation</span> <button type="button" id="copyApaBtn" class="copy-btn copy-btn-subtle" data-copy-target="apaText" data-astro-cid-jm7tem27> <span data-astro-cid-jm7tem27>Copy APA</span> </button> </div> <p id="apaText" class="apa-text" data-astro-cid-jm7tem27>Nyalala, I. (2026). CropKD-Net: Multi-Teacher Knowledge Distillation and Quantization-Aware Compression for Sub-150KB Cross-Crop Edge Leaf Diagnostics. SAAIL Lab CropGuard Research Series (Paper 2). https://saaillab.github.io/papers/cropkd-net/</p> </div> </div> </section> </main> <footer class="project-footer" data-astro-cid-jm7tem27> <div class="container container-reading" data-astro-cid-jm7tem27> <p data-astro-cid-jm7tem27>
-Hosted by <a href="https://saaillab.github.io/" data-astro-cid-jm7tem27>SAAIL Lab (Scientific &amp; Applied AI Lab)</a> at
-<a href="https://www.iitmz.ac.in/" target="_blank" rel="noopener" data-astro-cid-jm7tem27>IIT Madras Zanzibar</a> &amp;
-<a href="https://wsai.iitm.ac.in/" target="_blank" rel="noopener" data-astro-cid-jm7tem27>WSDSAI IIT Madras</a>, led by
-<a href="https://inyalala.github.io" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Dr. Innocent Nyalala</a>.
-</p> <p class="template-credit" data-astro-cid-jm7tem27>
-Page architecture inspired by the open-source <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener" data-astro-cid-jm7tem27>Academic Project Page Template</a>.
-        Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener" data-astro-cid-jm7tem27>Creative Commons Attribution-ShareAlike 4.0 International</a>.
-</p> <div class="footer-links" data-astro-cid-jm7tem27> <a href="https://saaillab.github.io/" data-astro-cid-jm7tem27>SAAIL Lab Home</a> <span data-astro-cid-jm7tem27>·</span> <a href="https://saaillab.github.io/publications" data-astro-cid-jm7tem27>All Publications</a> <span data-astro-cid-jm7tem27>·</span> <a href="https://saaillab.github.io/cropguard/" data-astro-cid-jm7tem27>CropGuard Ecosystem</a> <span data-astro-cid-jm7tem27>·</span> <a href="https://saaillab.github.io/github" data-astro-cid-jm7tem27>Open-Source Repositories</a> <span data-astro-cid-jm7tem27>·</span> <a href="https://saaillab.github.io/contact" data-astro-cid-jm7tem27>Contact</a> </div> </div> </footer> <script>
-    // More Works floating dropdown
-    (function () {
-      const btn = document.getElementById('moreWorksBtn');
-      const dropdown = document.getElementById('moreWorksDropdown');
-      const closeBtn = document.getElementById('closeMoreWorks');
-      const chevron = document.getElementById('moreWorksChevron');
-
-      function setOpen(open) {
-        if (!btn || !dropdown) return;
-        dropdown.hidden = !open;
-        btn.setAttribute('aria-expanded', String(open));
-        if (chevron) {
-          chevron.style.transform = open ? 'rotate(180deg)' : 'rotate(0deg)';
-        }
-      }
-
-      if (btn && dropdown) {
-        btn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          setOpen(dropdown.hidden);
-        });
-        if (closeBtn) {
-          closeBtn.addEventListener('click', function () { setOpen(false); });
-        }
-        document.addEventListener('click', function (e) {
-          if (!dropdown.hidden && !dropdown.contains(e.target) && !btn.contains(e.target)) {
-            setOpen(false);
-          }
-        });
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && !dropdown.hidden) setOpen(false);
-        });
-      }
-
-      // Figure carousel
-      const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-      const dots = Array.from(document.querySelectorAll('.carousel-dot'));
-      const prevBtn = document.getElementById('prevSlideBtn');
-      const nextBtn = document.getElementById('nextSlideBtn');
-      let current = 0;
-
-      function showSlide(idx) {
-        if (slides.length === 0) return;
-        current = (idx + slides.length) % slides.length;
-        slides.forEach(function (s, i) { s.classList.toggle('is-active', i === current); });
-        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
-      }
-
-      if (prevBtn) prevBtn.addEventListener('click', function () { showSlide(current - 1); });
-      if (nextBtn) nextBtn.addEventListener('click', function () { showSlide(current + 1); });
-      dots.forEach(function (d) {
-        d.addEventListener('click', function () {
-          const target = parseInt(d.getAttribute('data-slide-to') || '0', 10);
-          showSlide(target);
-        });
-      });
-
-      // Clipboard Copy buttons
-      function attachCopy(btnId) {
-        const copyBtn = document.getElementById(btnId);
-        if (!copyBtn) return;
-        const originalHtml = copyBtn.innerHTML;
-        copyBtn.addEventListener('click', async function () {
-          const targetId = copyBtn.getAttribute('data-copy-target');
-          const el = targetId ? document.getElementById(targetId) : null;
-          const text = el ? (el.textContent || '').trim() : '';
-          if (!text) return;
-          try {
-            await navigator.clipboard.writeText(text);
-            copyBtn.classList.add('copied');
-            copyBtn.innerHTML = '<span>&#10003; Copied</span>';
-            setTimeout(function () {
-              copyBtn.classList.remove('copied');
-              copyBtn.innerHTML = originalHtml;
-            }, 1800);
-          } catch (_err) {
-            const area = document.createElement('textarea');
-            area.value = text;
-            document.body.appendChild(area);
-            area.select();
-            document.execCommand('copy');
-            document.body.removeChild(area);
-          }
-        });
-      }
-      attachCopy('copyBibBtn');
-      attachCopy('copyApaBtn');
-    })();
-  </script>  </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CropKD-Net | Edge Knowledge Distillation Study | SAAIL Lab</title>
+  <meta name="description" content="Exploratory edge knowledge distillation extension of CropGuardNet by SAAIL Lab, School of Engineering and Science, IIT Madras Zanzibar." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://saaillab.github.io/papers/cropguardnet/" />
+  <link rel="icon" type="image/png" href="https://saaillab.github.io/images/logo/saail-crest.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CropKD-Net | Edge Knowledge Distillation Study | SAAIL Lab" />
+  <meta property="og:description" content="Exploratory edge knowledge distillation extension of CropGuardNet at SAAIL Lab, IIT Madras Zanzibar." />
+  <meta property="og:image" content="https://saaillab.github.io/images/logo/saail-logo.png" />
+  <style>
+    body { font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; background: #ffffff; color: #111827; line-height: 1.65; }
+    .wrap { max-width: 780px; margin: 4rem auto; padding: 0 1.5rem; text-align: center; }
+    h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    p { color: #374151; font-size: 1.05rem; margin-bottom: 1.35rem; }
+    .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin: 2rem 0; }
+    .btn { display: inline-block; padding: 0.65rem 1.25rem; border-radius: 999px; background: #24292f; color: #fff; text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+    .btn:hover { background: #14532d; }
+    .foot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; font-size: 0.88rem; color: #6b7280; }
+    .foot a { color: #14532d; text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>CropKD-Net: Edge Knowledge Distillation Study</h1>
+    <p>
+      <strong>CropKD-Net</strong> is an ongoing edge-compression study by <strong>Dr. Innocent Nyalala</strong> exploring sub-100K student distillation from the <strong>CropGuardNet</strong> multi-crop CNN-Transformer teacher across the 35,420-image deduplicated leaf pathology benchmark.
+    </p>
+    <p>
+      For full benchmarks, deduplication manifests, XAI attribution maps, and PyTorch/ONNX code, visit the parent CropGuardNet project page and repository.
+    </p>
+    <div class="btns">
+      <a class="btn" href="https://saaillab.github.io/papers/cropguardnet/">CropGuardNet Paper Page</a>
+      <a class="btn" href="https://github.com/saaillab/CropGuardNet" target="_blank" rel="noopener">CropGuardNet Code</a>
+      <a class="btn" href="https://saaillab.github.io/projects/cropguard-pathology/">Lab Crop Pathology Project</a>
+      <a class="btn" href="https://saaillab.github.io/publications/">All 42 Lab &amp; PI Papers</a>
+    </div>
+    <footer class="foot">
+      Hosted by <a href="https://saaillab.github.io/">SAAIL Lab (Sustainable AI for Agriculture &amp; Intelligent Livelihoods)</a> · School of Engineering and Science, Indian Institute of Technology Madras Zanzibar, Tanzania
+    </footer>
+  </main>
+</body>
+</html>

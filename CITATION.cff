@@ -1,5 +1,6 @@
 cff-version: 1.2.0
-title: "CropKD-Net: Ultra-Compact Knowledge Distillation and INT8 Quantization for Edge Plant Disease Diagnosis"
+title: "CropKD-Net: Sub-100K Parameter Edge Knowledge Distillation Study (In Development)"
+message: "If you use or build on the parent CropGuardNet framework, please cite the parent work."
 type: software
 authors:
   - family-names: Nyalala
