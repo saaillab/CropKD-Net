@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "CropKD-Net: Ultra-Compact Knowledge Distillation and INT8 Quantization for Edge Plant Disease Diagnosis"
+type: software
+authors:
+  - family-names: Nyalala
+    given-names: Innocent
+    orcid: "https://orcid.org/0000-0002-7969-437X"
+repository-code: "https://github.com/saaillab/CropKD-Net"
+url: "https://saaillab.github.io/CropKD-Net/"
+license: MIT
+year: 2026
